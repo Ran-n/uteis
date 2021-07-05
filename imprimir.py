@@ -3,14 +3,30 @@
 # --------------------------------------------
 #+ Autor:	Ran#
 #+ Creado:	05/07/2021 17:47:50
-#+ Editado:	05/07/2021 17:55:47
+#+ Editado:	05/07/2021 21:23:20
 # --------------------------------------------
+
 import json
+
 # --------------------------------------------
 # forma bonita de imprimir diccionarios de python
 def jprint(diccionario, indent=4, sort=False):
+    """
+    Dado un diccionario en python, mostrao de forma bonita por pantalla.
+
+    @entrada:
+        Nome        ;Descripción            ;Req/Op     ;Tipo var
+        diccionario ;Elemento a imprimir    ;Requerido  ;Diccionario
+        indent      ;Indentación a mostrar  ;Opcional   ;Int
+        sort        ;Se ordea o diccionario ;Opcional   ;Booleano
+
+    @saida: Impresión por pantalla
+    """
+
     print(json.dumps(diccionario, indent=indent, sort_keys=sort))
+
 # --------------------------------------------
+
 if __name__ == '__main__':
     print('*> Probas <*')
     print('> jprint')

@@ -3,8 +3,9 @@
 # --------------------------------------------
 #+ Autor:	Ran#
 #+ Creado:	05/07/2021 17:08:25
-#+ Editado:	05/07/2021 21:18:13
+#+ Editado:	05/07/2021 21:23:31
 # --------------------------------------------
+
 # risca o texto proporcionado
 def riscar(catex):
     """
@@ -13,7 +14,7 @@ def riscar(catex):
     de ser texto, devolveo riscado
 
     @entrada:
-        nome    ;Descripción                ;Req/Opcio  ;Tipo variable
+        Nome    ;Descripción                ;Req/Opcio  ;Tipo variable
         catex   ;Texto/lista a modificar    ;Requirido  ;Catex
 
     @saida: Catex
@@ -35,6 +36,7 @@ def riscar(catex):
         return catex
 
 # --------------------------------------------
+
 if __name__ == '__main__':
     print('*> Probas <*')
     print('> riscar')
@@ -46,4 +48,5 @@ if __name__ == '__main__':
     print(riscar(['texto', ['lista', 'listisima']]))
     print('Riscando lista ["texto", ["lista", "listisima", ["si", 2]]]: ', end='')
     print(riscar(['texto', ['lista', 'listisima', ['si', 2]]]))
+    
 # --------------------------------------------
