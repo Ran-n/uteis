@@ -23,7 +23,7 @@ def jprint(diccionario, indent=4, sort=False):
         └ Se ordea o diccionario.
 
     @saida:
-        Impresión por pantalla
+        Impresión por pantalla.
     """
 
     print(json.dumps(diccionario, indent=indent, sort_keys=sort))
