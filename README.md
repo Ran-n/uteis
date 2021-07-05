@@ -1,6 +1,7 @@
 # uteis
-[Ran-n/uteis](https://github.com/Ran-n/uteis)  
 [![GitHub license](https://img.shields.io/github/license/Ran-n/uteis)](https://github.com/Ran-n/uteis/blob/master/LICENSE)
+
+[Ran-n/uteis](https://github.com/Ran-n/uteis)
 
 Serie de ficheiros en python con funcións típicas e de gran uso.
 Desta forma, en lugar de crear un ficheiro de uteis para cada proxecto poderase engadir este módulo e cargar as funcións precisas del no novo proxecto.
