@@ -3,7 +3,7 @@
 # --------------------------------------------
 #+ Autor:	Ran#
 #+ Creado:	05/07/2021 17:08:25
-#+ Editado:	05/07/2021 21:23:31
+#+ Editado:	05/07/2021 21:46:23
 # --------------------------------------------
 
 # risca o texto proporcionado
@@ -11,13 +11,14 @@ def riscar(catex):
     """
     Dado un texto introducido, devolveo riscado.
     Se se introduce unha lista, mira cada elemento e,
-    de ser texto, devolveo riscado
+    de ser texto, devolveo riscado.
 
     @entrada:
-        Nome    ;Descripción                ;Req/Opcio  ;Tipo variable
-        catex   ;Texto/lista a modificar    ;Requirido  ;Catex
+        catex   -   Requirido  -    Catex
+        └ Texto/lista a modificar
 
-    @saida: Catex
+    @saida:
+        Catex
     """
 
     # se mete un catex
