@@ -3,7 +3,7 @@
 # --------------------------------------------
 #+ Autor:	Ran#
 #+ Creado:	05/07/2021 17:08:25
-#+ Editado:	05/07/2021 21:16:29
+#+ Editado:	05/07/2021 21:18:13
 # --------------------------------------------
 # risca o texto proporcionado
 def riscar(catex):
@@ -18,15 +18,18 @@ def riscar(catex):
 
     @saida: Catex
     """
+
     # se mete un catex
     if type(catex) == str:
         return ''.join([u'\u0336{}'.format(ele) for ele in catex])
+
     # se mete unha lista
     elif type(catex) == list:
         # para cada elemento da lista chamamos á operación de riscado e metemos o novo valor no lugar do vello
         for index, ele in enumerate(catex):
             catex[index] = riscar(ele)
         return catex
+
     # se non é ningún devolver a entrada tal cal
     else:
         return catex
