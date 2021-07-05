@@ -1,4 +1,4 @@
-# uteis
+# uteis {#uteis}
 [![GitHub license](https://img.shields.io/github/license/Ran-n/uteis)](https://github.com/Ran-n/uteis/blob/master/LICENSE)
 
 [Ran-n/uteis](https://github.com/Ran-n/uteis)
@@ -13,7 +13,7 @@ Exemplo de carga:
 > from uteis import catex  
 > from uteis.ficheiro import cargar  
 
-## Doazóns
+## Doazóns {#doazons}
 🙇🙇‍♀
 | Moeda     | Dirección                                                                                         |
 | :---:     | :---                                                                                              |
