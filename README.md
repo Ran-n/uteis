@@ -4,6 +4,13 @@
 Serie de ficheiros en python con funcións típicas e de gran uso.
 Desta forma, en lugar de crear un ficheiro de uteis para cada proxecto poderase engadir este módulo e cargar as funcións precisas del no novo proxecto.
 
+Exemplo de carga:  
+    import uteis
+    from uteis import catex
+    from uteis import catex, ficheiro
+    from uteis import catex
+    from uteis.ficheiro import cargar
+
 ## Doazóns
 🙇🙇‍♀
 | Moeda     | Dirección                                                                                         |
