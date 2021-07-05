@@ -23,7 +23,7 @@ def cargar(fich_nome, encoding='utf-8-sig'):
         conn.close()
         return fich_contido
 # --------------------------------------------
-if __name__ = '__main__':
+if __name__ == '__main__':
     print('*> Probas <*')
     print('> cargar')
     print('sen facer')
