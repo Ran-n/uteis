@@ -3,7 +3,7 @@
 # --------------------------------------------
 #+ Autor:	Ran#
 #+ Creado:	05/07/2021 17:08:25
-#+ Editado:	05/07/2021 17:32:25
+#+ Editado:	05/07/2021 17:52:56
 # --------------------------------------------
 # risca o texto proporcionado
 def riscar(catex):
@@ -22,7 +22,7 @@ def riscar(catex):
 
 # --------------------------------------------
 if __name__ == '__main__':
-    print('*> Tets <*')
+    print('*> Probas <*')
     print('> riscar')
     print('Riscando "texto": ', end='')
     print(riscar('texto'))
