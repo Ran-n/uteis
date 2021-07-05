@@ -3,10 +3,21 @@
 # --------------------------------------------
 #+ Autor:	Ran#
 #+ Creado:	05/07/2021 17:08:25
-#+ Editado:	05/07/2021 17:52:56
+#+ Editado:	05/07/2021 21:16:29
 # --------------------------------------------
 # risca o texto proporcionado
 def riscar(catex):
+    """
+    Dado un texto introducido, devolveo riscado.
+    Se se introduce unha lista, mira cada elemento e,
+    de ser texto, devolveo riscado
+
+    @entrada:
+        nome    ;Descripción                ;Req/Opcio  ;Tipo variable
+        catex   ;Texto/lista a modificar    ;Requirido  ;Catex
+
+    @saida: Catex
+    """
     # se mete un catex
     if type(catex) == str:
         return ''.join([u'\u0336{}'.format(ele) for ele in catex])
