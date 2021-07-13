@@ -114,7 +114,7 @@ def cargarJson(fich_nome):
             conn.close()
 
             # faise recursión
-            jcargarFich(fich_nome)
+            cargarJson(fich_nome)
     except:
         raise
     else:
