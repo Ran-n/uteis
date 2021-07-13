@@ -3,7 +3,7 @@
 # --------------------------------------------
 #+ Autor:	Ran#
 #+ Creado:	05/07/2021 17:36:35
-#+ Editado:	13/07/2021 17:18:39
+#+ Editado:	13/07/2021 17:26:39
 # --------------------------------------------
 
 import os
@@ -62,7 +62,7 @@ def gardarFich(fich_nome, contido, encoding='utf-8-sig'):
     @entrada:
         fich_nome   -   Requerido   -   Catex
         └ Nome do ficheiro a gardar, con extensión. Con ou sen o camiño incluído.
-        contido     -   Requerido   -   Catex
+        contido     -   Requerido   -   Lista de catexs
         └ Catex a gardar dentro do ficheiro.
         encoding    -   Opcional    -   Catex
         └ Tipo de codificación a usar.
@@ -72,9 +72,9 @@ def gardarFich(fich_nome, contido, encoding='utf-8-sig'):
         └ Verdadeiro:   Indica o correcto funcionamento.
     """
     try:
-        os.makedirs('/'.join(fich_nome.split('/')[:-1])), exist_ok=True)
+        os.makedirs('/'.join(fich_nome.split('/')[:-1]), exist_ok=True)
 
-        conn = open(fich_nome.split('/')[-1]
+        conn = open(fich_nome.split('/')[-1], 'w')
         for ele in contido:
             conn.writelines(ele+'\n')
     except:
