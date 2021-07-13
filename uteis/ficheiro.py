@@ -149,7 +149,7 @@ def gardarJson(fich_nome, contido, indent=1, sort_keys=False, ensure_ascii=False
     # faise neste bloque en lugar de directamente para poder pechar a conexión
     # de non pechala pódese corromper
     try:
-        conn = open(ficheiro, 'w')
+        conn = open(fich_nome, 'w')
         conn.write(json.dumps(contido, indent=indent, sort_keys=sort_keys, ensure_ascii=ensure_ascii))
     except:
         # saca o erro producido
