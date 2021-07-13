@@ -3,7 +3,7 @@
 # --------------------------------------------
 #+ Autor:	Ran#
 #+ Creado:	05/07/2021 17:36:35
-#+ Editado:	13/07/2021 17:26:39
+#+ Editado:	13/07/2021 17:29:26
 # --------------------------------------------
 
 import os
@@ -107,7 +107,7 @@ def cargarJson(fich_nome):
         # se non existe
         else:
             # crease
-            conn = open(fich_nome, 'w'):
+            conn = open(fich_nome, 'w')
             # soamente con {} no interior
             conn.write('{}')
             # pechase directamente
