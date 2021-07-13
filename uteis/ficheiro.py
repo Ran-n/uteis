@@ -3,7 +3,7 @@
 # --------------------------------------------
 #+ Autor:	Ran#
 #+ Creado:	05/07/2021 17:36:35
-#+ Editado:	13/07/2021 15:05:38
+#+ Editado:	13/07/2021 17:18:39
 # --------------------------------------------
 
 import os
@@ -42,19 +42,18 @@ def cargarFich(fich_nome, en_linhas=True, encoding='utf-8-sig'):
             fich_contido = conn.readlines()
         else:
             fich_contido = conn.read()
-
     except:
         # saca o erro producido
         raise
-
     # se non ocorre ningunha excepción
     else:
         return fich_contido
-
     finally:
         if 'conn' in globals():
             conn.close()
 
+# garda nun ficheiro os contidos proporcionados
+# xFCR: pode ser o contido un array?
 def gardarFich(fich_nome, contido, encoding='utf-8-sig'):
     """
     Dado un nome de ficheiro (con ou sen path/caminho) gardao en memoria.
@@ -78,21 +77,54 @@ def gardarFich(fich_nome, contido, encoding='utf-8-sig'):
         conn = open(fich_nome.split('/')[-1]
         for ele in contido:
             conn.writelines(ele+'\n')
-
     except:
         # saca o erro producido
         raise
-
     else:
         return True
-
     finally:
         # se existe a variable
         if 'conn' in globals():
             conn.close()
 
+# carga os contidos dun ficheiro
+def cargarJson(fich_nome):
+    """
+    Dado o nome dun ficheiro json cargao en memoria
+
+    @entrada:
+        fich_nome   -   Requerido   -   Catex
+        └ Nome do ficheiro (.json) a cargar.
+
+    @saida:
+        Diccionario -   Sempre
+        └ Cos datos json contidos.
+    """
+    try:
+        # se existe abrese conexión
+        if os.path.isfile(fich_nome):
+            conn = open(fich_nome)
+        # se non existe
+        else:
+            # crease
+            conn = open(fich_nome, 'w'):
+            # soamente con {} no interior
+            conn.write('{}')
+            # pechase directamente
+            conn.close()
+
+            # faise recursión
+            jcargarFich(fich_nome)
+    except:
+        raise
+    else:
+        return json.loads(conn.read())
+    finally:
+        if 'conn' in globals():
+            conn.close()
+
 # garda nun ficheiro os contidos dun diccionario de python no formato json
-def jgardarFich(fich_nome, contido, indent=1, sort_keys=False, ensure_ascii=False):
+def gardarJson(fich_nome, contido, indent=1, sort_keys=False, ensure_ascii=False):
     """
     Dado un nome de ficheiro e o seu contido gardao en memoria.
 
@@ -119,14 +151,11 @@ def jgardarFich(fich_nome, contido, indent=1, sort_keys=False, ensure_ascii=Fals
     try:
         conn = open(ficheiro, 'w')
         conn.write(json.dumps(contido, indent=indent, sort_keys=sort_keys, ensure_ascii=ensure_ascii))
-
     except:
         # saca o erro producido
         raise
-
     else:
         return True
-
     finally:
         if 'conn' in globals():
             conn.close()
