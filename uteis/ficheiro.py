@@ -3,7 +3,7 @@
 # --------------------------------------------
 #+ Autor:	Ran#
 #+ Creado:	05/07/2021 17:36:35
-#+ Editado:	13/07/2021 17:29:26
+#+ Editado:	13/07/2021 17:37:17
 # --------------------------------------------
 
 import os
@@ -100,28 +100,28 @@ def cargarJson(fich_nome):
         Diccionario -   Sempre
         └ Cos datos json contidos.
     """
-    try:
-        # se existe abrese conexión
-        if os.path.isfile(fich_nome):
+    # se existe abrese conexión
+    if os.path.isfile(fich_nome):
+        try:
             conn = open(fich_nome)
-        # se non existe
+        except:
+            raise
         else:
-            # crease
-            conn = open(fich_nome, 'w')
-            # soamente con {} no interior
-            conn.write('{}')
-            # pechase directamente
-            conn.close()
-
-            # faise recursión
-            cargarJson(fich_nome)
-    except:
-        raise
+            return json.loads(conn.read())
+        finally:
+            if 'conn' in globals():
+                conn.close()
+    # se non existe
     else:
-        return json.loads(conn.read())
-    finally:
-        if 'conn' in globals():
-            conn.close()
+        # crease
+        conn = open(fich_nome, 'w')
+        # soamente con {} no interior
+        conn.write('{}')
+        # pechase directamente
+        conn.close()
+
+        # faise recursión
+        return cargarJson(fich_nome)
 
 # garda nun ficheiro os contidos dun diccionario de python no formato json
 def gardarJson(fich_nome, contido, indent=1, sort_keys=False, ensure_ascii=False):
