@@ -3,7 +3,7 @@
 # --------------------------------------------
 #+ Autor:	Ran#
 #+ Creado:	05/07/2021 17:36:35
-#+ Editado:	13/07/2021 17:37:17
+#+ Editado:	13/07/2021 19:18:03
 # --------------------------------------------
 
 import os
@@ -130,7 +130,7 @@ def gardarJson(fich_nome, contido, indent=1, sort_keys=False, ensure_ascii=False
 
     @entrada:
         fich_nome       -   Requerido   -   Catex
-        └ Nome e extensión do fich de saída.
+        └ Nome do ficheiro a gardar, con extensión. Con ou sen o camiño incluído.
         contido         -   Requerido   -   Catex
         └ O que ten o ficheiro dentro.
         indent          -   Opcional    -   Int
@@ -149,7 +149,9 @@ def gardarJson(fich_nome, contido, indent=1, sort_keys=False, ensure_ascii=False
     # faise neste bloque en lugar de directamente para poder pechar a conexión
     # de non pechala pódese corromper
     try:
-        conn = open(fich_nome, 'w')
+        os.makedirs('/'.join(fich_nome.split('/')[:-1]), exist_ok=True)
+
+        conn = open(fich_nome.split('/')[-1], 'w')
         conn.write(json.dumps(contido, indent=indent, sort_keys=sort_keys, ensure_ascii=ensure_ascii))
     except:
         # saca o erro producido
