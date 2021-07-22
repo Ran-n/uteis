@@ -1,3 +1,22 @@
+Metadata-Version: 2.1
+Name: uteis
+Version: 0.1.1
+Summary: Paquetes con funcións uteis para programar en python
+Home-page: https://wwww.github.com/Ran-n/uteis
+Author: Ran#
+Author-email: ran-n@tutanota.com
+License: UNKNOWN
+Project-URL: Bug Tracker, https://wwww.github.com/Ran-n/uteis/issues
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3.8
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8.5
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
 # uteis
 [![GitHub license](https://img.shields.io/github/license/Ran-n/uteis)](https://github.com/Ran-n/uteis/blob/master/LICENSE)
 
@@ -23,3 +42,5 @@ Exemplos de carga:
 | Bitcoin | bc1q79vja8jzr27dxaf3ylu7e49ady8zq0jsm5qfk6 |  
 | Monero | 88Rezd6ZQzaCb1s7K1tRCiCaDzuHrfYsn4q348jJuePpLs84JNsWEghMAZZgzpDPrqD4PBxk7hwMkSdNQ4CLqFHyPVLdX1D |  
 | Wownero | WW2RheTNrq8goAi42Dz5AKUj1qLSaTSSgiH7sHR2qRqojg238EXP3MM3xuUgswriET7UrpkEoYaCkecBhnU49oxM1dZyYoSmm |  
+
+

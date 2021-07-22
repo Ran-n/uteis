@@ -1,9 +1,9 @@
-#! /usr/bin/python3
+#! usr/bin/python3
 # -*- coding: utf-8 -*-
 # --------------------------------------------
 #+ Autor:	Ran#
 #+ Creado:	05/07/2021 17:36:35
-#+ Editado:	13/07/2021 19:18:03
+#+ Editado:	13/07/2021 19:29:51
 # --------------------------------------------
 
 import os
@@ -74,7 +74,7 @@ def gardarFich(fich_nome, contido, encoding='utf-8-sig'):
     try:
         os.makedirs('/'.join(fich_nome.split('/')[:-1]), exist_ok=True)
 
-        conn = open(fich_nome.split('/')[-1], 'w')
+        conn = open(fich_nome, 'w')
         for ele in contido:
             conn.writelines(ele+'\n')
     except:
@@ -151,7 +151,8 @@ def gardarJson(fich_nome, contido, indent=1, sort_keys=False, ensure_ascii=False
     try:
         os.makedirs('/'.join(fich_nome.split('/')[:-1]), exist_ok=True)
 
-        conn = open(fich_nome.split('/')[-1], 'w')
+        conn = open(fich_nome, 'w')
+        #conn = open(fich_nome.split('/')[-1], 'w')
         conn.write(json.dumps(contido, indent=indent, sort_keys=sort_keys, ensure_ascii=ensure_ascii))
     except:
         # saca o erro producido
