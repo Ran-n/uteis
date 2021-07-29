@@ -2,6 +2,7 @@ LICENSE
 README.md
 pyproject.toml
 setup.cfg
+setup.py
 src/uteis/__init__.py
 src/uteis/catex.py
 src/uteis/ficheiro.py

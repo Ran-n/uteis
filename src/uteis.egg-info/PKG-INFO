@@ -2,18 +2,18 @@ Metadata-Version: 2.1
 Name: uteis
 Version: 0.1.2
 Summary: Paquetes con funcións uteis para programar en python
-Home-page: https://wwww.github.com/Ran-n/uteis
+Home-page: https://github.com/ran-n/uteis
 Author: Ran#
 Author-email: ran-n@tutanota.com
 License: UNKNOWN
-Project-URL: Bug Tracker, https://wwww.github.com/Ran-n/uteis/issues
+Project-URL: Bug Tracker, https://github.com/ran-n/uteis/issues
 Platform: UNKNOWN
 Classifier: Development Status :: 1 - Planning
 Classifier: Intended Audience :: Developers
 Classifier: Programming Language :: Python :: 3.8
 Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
 Classifier: Operating System :: OS Independent
-Requires-Python: >=3.8.5
+Requires-Python: >=3.8
 Description-Content-Type: text/markdown
 License-File: LICENSE
 

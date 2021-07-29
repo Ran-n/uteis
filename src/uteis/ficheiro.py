@@ -3,11 +3,12 @@
 # --------------------------------------------
 #+ Autor:	Ran#
 #+ Creado:	05/07/2021 17:36:35
-#+ Editado:	13/07/2021 19:29:51
+#+ Editado:	29/07/2021 12:38:41
 # --------------------------------------------
 
 import os
 import json
+import csv
 
 # --------------------------------------------
 
@@ -162,6 +163,31 @@ def gardarJson(fich_nome, contido, indent=1, sort_keys=False, ensure_ascii=False
     finally:
         if 'conn' in globals():
             conn.close()
+
+'''
+def gardarCSV(fich_nome, fich_contido):
+    """
+    Garda en forma de ficheiro os contidos dunha lista
+
+    @entrada:
+
+    @saida:
+    """
+    try:
+        os.makedirs('/'.join(fich_nome.split('/')[:-1], exist_ok=True)
+        conn = open(fich_nome, 'w') as csvfile
+        for fila in fich_contido:
+            conn.csvfile.write(','.join(row))
+            conn.csfile.write('\n')
+    except:
+        # saca erro producido
+        raise
+    else:
+        return True
+    finally:
+        if 'conn' in globals():
+            conn.close()
+'''
 
 # --------------------------------------------
 
