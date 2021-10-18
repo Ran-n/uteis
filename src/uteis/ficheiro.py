@@ -3,7 +3,7 @@
 # --------------------------------------------
 #+ Autor:	Ran#
 #+ Creado:	05/07/2021 17:36:35
-#+ Editado:	29/07/2021 12:38:41
+#+ Editado:	18/10/2021 19:52:07
 # --------------------------------------------
 
 import os
@@ -40,7 +40,7 @@ def cargarFich(fich_nome, en_linhas=True, encoding='utf-8-sig'):
     try:
         conn = open(fich_nome, 'r', encoding=encoding)
         if en_linhas:
-            fich_contido = conn.readlines()
+            fich_contido = [linha.rstrip() for linha in conn.readlines()]
         else:
             fich_contido = conn.read()
     except:
