@@ -3,7 +3,7 @@
 # --------------------------------------------
 #+ Autor:	Ran#
 #+ Creado:	05/07/2021 17:36:35
-#+ Editado:	18/10/2021 19:52:07
+#+ Editado:	2021/10/23 23:07:41.032415
 # --------------------------------------------
 
 import os
@@ -15,22 +15,28 @@ import csv
 # carga os contidos dun ficheiro
 def cargarFich(fich_nome, en_linhas=True, encoding='utf-8-sig'):
     """
-    Dado un catex, ou lista con catexs, de entrada;
-    devolve esta mesma estrutura pero cos catexs riscados.
+    Dado un nome de ficheiro como catex carga os seus contidos nunha lista.
+
 
     @entrada:
         fich_nome   -   Requerido   -   Catex/Lista
         └ Nome do ficheiro a cargar, con extensión.
+
         en_linhas   -   Opcional    -   Booleano
         └ True: carga nun array cada linha como catex.
         └ False: carga nun só catex con todo o ficheiro.
+
         encoding    -   Opcional    -   Catex
         └ Tipo de codificación a usar.
+
 
     @saída:
         Catex   -   Sempre
         └ O contido do ficheiro.
     """
+    # Comprobar se ten un path indicado, senón suponse que o fich esta na carpeta actual
+ #   if '/' not in fich_nome:
+ #       fich_nome = './'+fich_nome
     # se o ficheiro a cargar non existe sacar erro
     if not os.path.isfile(fich_nome):
         raise Exception('O ficheiro {} non existe'.format(nome))
@@ -60,13 +66,17 @@ def gardarFich(fich_nome, contido, encoding='utf-8-sig'):
     Dado un nome de ficheiro (con ou sen path/caminho) gardao en memoria.
     Se non se da camiño na propia carpeta de execución e senón non camiño dado.
 
+
     @entrada:
         fich_nome   -   Requerido   -   Catex
         └ Nome do ficheiro a gardar, con extensión. Con ou sen o camiño incluído.
+
         contido     -   Requerido   -   Lista de catexs
         └ Catex a gardar dentro do ficheiro.
+
         encoding    -   Opcional    -   Catex
         └ Tipo de codificación a usar.
+
 
     @saída:
         Booleano    -   Cando todo foi correcto.
@@ -93,9 +103,11 @@ def cargarJson(fich_nome):
     """
     Dado o nome dun ficheiro json cargao en memoria
 
+
     @entrada:
         fich_nome   -   Requerido   -   Catex
         └ Nome do ficheiro (.json) a cargar.
+
 
     @saida:
         Diccionario -   Sempre
@@ -129,18 +141,24 @@ def gardarJson(fich_nome, contido, indent=1, sort_keys=False, ensure_ascii=False
     """
     Dado un nome de ficheiro e o seu contido gardao en memoria.
 
+
     @entrada:
         fich_nome       -   Requerido   -   Catex
         └ Nome do ficheiro a gardar, con extensión. Con ou sen o camiño incluído.
+
         contido         -   Requerido   -   Catex
         └ O que ten o ficheiro dentro.
+
         indent          -   Opcional    -   Int
         └ Grado de indentación a usar.
+
         sort_keys       -   Opcional    -   Boleano
         └ Indica se se ordean as chaves do diccionario ou non.
+
         ensure_ascii    -   Opcional    -   Boleano
         └ De estar a True, asegurase que o resultado sexan caracters
             ascii válidos e que se devolva un obxecto de tipo unicode.
+
 
     @saida:
         Booleano    -   Canto todo foi correcto.
@@ -169,9 +187,12 @@ def gardarCSV(fich_nome, fich_contido):
     """
     Garda en forma de ficheiro os contidos dunha lista
 
+
     @entrada:
 
+
     @saida:
+
     """
     try:
         os.makedirs('/'.join(fich_nome.split('/')[:-1], exist_ok=True)
