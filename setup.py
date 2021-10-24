@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setuptools.setup(
     name="uteis",
-    version="0.1.2",
+    version="0.1.2.1",
     author="Ran#",
     author_email="ran-n@tutanota.com",
     description="Paquetes con funcións uteis para programar en python",

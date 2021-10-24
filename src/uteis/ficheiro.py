@@ -3,7 +3,7 @@
 # --------------------------------------------
 #+ Autor:	Ran#
 #+ Creado:	05/07/2021 17:36:35
-#+ Editado:	2021/10/23 23:07:41.032415
+#+ Editado:	2021/10/24 16:14:11.740212
 # --------------------------------------------
 
 import os
@@ -83,7 +83,8 @@ def gardarFich(fich_nome, contido, encoding='utf-8-sig'):
         └ Verdadeiro:   Indica o correcto funcionamento.
     """
     try:
-        os.makedirs('/'.join(fich_nome.split('/')[:-1]), exist_ok=True)
+        if '/' in fich_nome:
+            os.makedirs('/'.join(fich_nome.split('/')[:-1]), exist_ok=True)
 
         conn = open(fich_nome, 'w')
         for ele in contido:
