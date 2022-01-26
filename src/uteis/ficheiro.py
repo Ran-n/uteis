@@ -3,17 +3,14 @@
 # --------------------------------------------
 #+ Autor:	Ran#
 #+ Creado:	05/07/2021 17:36:35
-#+ Editado:	2021/10/24 16:14:11.740212
+#+ Editado:	2022/01/26 19:51:33.479109
 # --------------------------------------------
-
 import os
 import json
 import csv
-
 # --------------------------------------------
-
 # carga os contidos dun ficheiro
-def cargarFich(fich_nome, en_linhas=True, encoding='utf-8-sig'):
+def cargar_fich(fich_nome, en_linhas=True, encoding='utf-8-sig'):
     """
     Dado un nome de ficheiro como catex carga os seus contidos nunha lista.
 
@@ -61,7 +58,7 @@ def cargarFich(fich_nome, en_linhas=True, encoding='utf-8-sig'):
 
 # garda nun ficheiro os contidos proporcionados
 # xFCR: pode ser o contido un array?
-def gardarFich(fich_nome, contido, encoding='utf-8-sig'):
+def gardar_fich(fich_nome, contido, encoding='utf-8-sig'):
     """
     Dado un nome de ficheiro (con ou sen path/caminho) gardao en memoria.
     Se non se da camiño na propia carpeta de execución e senón non camiño dado.
@@ -100,7 +97,7 @@ def gardarFich(fich_nome, contido, encoding='utf-8-sig'):
             conn.close()
 
 # carga os contidos dun ficheiro
-def cargarJson(fich_nome):
+def cargar_json(fich_nome):
     """
     Dado o nome dun ficheiro json cargao en memoria
 
@@ -138,7 +135,7 @@ def cargarJson(fich_nome):
         return cargarJson(fich_nome)
 
 # garda nun ficheiro os contidos dun diccionario de python no formato json
-def gardarJson(fich_nome, contido, indent=1, sort_keys=False, ensure_ascii=False):
+def gardar_json(fich_nome, contido, indent=1, sort_keys=False, ensure_ascii=False):
     """
     Dado un nome de ficheiro e o seu contido gardao en memoria.
 
@@ -165,7 +162,6 @@ def gardarJson(fich_nome, contido, indent=1, sort_keys=False, ensure_ascii=False
         Booleano    -   Canto todo foi correcto.
         └ Verdadeiro:   Indica o correcto funcionamento.
     """
-
     # faise neste bloque en lugar de directamente para poder pechar a conexión
     # de non pechala pódese corromper
     try:
@@ -210,12 +206,5 @@ def gardarCSV(fich_nome, fich_contido):
         if 'conn' in globals():
             conn.close()
 '''
-
-# --------------------------------------------
-
-if __name__ == '__main__':
-    print('*> Probas <*')
-    print('> cargar')
-    print('sen facer')
 
 # --------------------------------------------

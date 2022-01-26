@@ -3,11 +3,10 @@
 # --------------------------------------------
 #+ Autor:	Ran#
 #+ Creado:	05/07/2021 17:08:25
-#+ Editado:	24/07/2021 01:56:48
+#+ Editado:	2022/01/26 19:53:23.117462
 # --------------------------------------------
-
 import random
-
+# --------------------------------------------
 # risca o texto proporcionado
 def riscar(catex):
     """
@@ -23,7 +22,6 @@ def riscar(catex):
         Catex/Lista.
         └ Catex de entrada riscado.
     """
-
     # se mete un catex
     if type(catex) == str:
         return ''.join([u'\u0336{}'.format(ele) for ele in catex])
@@ -57,6 +55,7 @@ def leetspeak(catex, espaciado=True):
         └ Traducción do catex de entrada a leetspeak.
     """
 
+    # xFCR: mover isto a un ficheiro
     leetspeak_basico = {
             'a': ['4', '@', '/\\', '/-\\', '?', '^', 'α', 'λ', '(L', 'Д', 'AYE'],
             'b': ['8', '|3', 'ß', 'l³', '13', 'I3', 'J3', '!3', '(3', '/3', ')3', '|-]', 'j3', '6'],
@@ -86,7 +85,7 @@ def leetspeak(catex, espaciado=True):
             'x': ['><', ')(', '}{', '%', '?', '×', '][', 'Ж', 'ECKS', '×'],
             'y': ['`/', '°/', '¥', 'j', 'Ч', '7', '\\|/', '\\//'],
             'z': ['z', '2', '"/_', '7_', '-/_', '%', '>_', 's', '~/_', '-\\_', '-|_'],
-            ' ': ['_', '-', '__', '--', '_-_', '-_-'] 
+            ' ': ['_', '-', '__', '--', '_-_', '-_-']
             }
 
     ls_catex = ''
@@ -95,7 +94,7 @@ def leetspeak(catex, espaciado=True):
     if type(catex) == str:
         ls_catex = ''.join([random.choice(leetspeak_basico[caracter.lower()])+' ' for caracter in catex])
 
-        if espaciado: 
+        if espaciado:
             return ls_catex[:-1]
         else:
             return ls_catex.replace(' ', '')
@@ -103,9 +102,7 @@ def leetspeak(catex, espaciado=True):
     # se mete unha lista
     elif type(catex) == list:
         return 'sen facer'
-
 # --------------------------------------------
-
 if __name__ == '__main__':
     print('*> Probas <*')
     print('> riscar')
@@ -123,5 +120,5 @@ if __name__ == '__main__':
     print('"Probando o convertidor" convírtese en {}'.format(leetspeak('Probando o convertidor')))
     print('"Probando o convertidor" convírtese en {}'.format(leetspeak('Probando o convertidor', False)))
     print()
-    
+
 # --------------------------------------------

@@ -3,11 +3,9 @@
 # --------------------------------------------
 #+ Autor:	Ran#
 #+ Creado:	05/07/2021 17:47:50
-#+ Editado:	05/07/2021 21:44:56
+#+ Editado:	2022/01/26 19:52:15.129610
 # --------------------------------------------
-
 import json
-
 # --------------------------------------------
 # forma bonita de imprimir diccionarios de python
 def jprint(diccionario, indent=4, sort=False):
