@@ -24,7 +24,7 @@ def jprint(diccionario, indent=4, sort=False):
         Impresión por pantalla.
     """
 
-    print(json.dumps(diccionario, indent=indent, sort_keys=sort))
+    print(json.dumps(diccionario, indent=indent, sort_keys=sort, ensure_ascii=False).encode('utf8').decode())
 
 # --------------------------------------------
 
